@@ -71,7 +71,9 @@ void create_dir_ext()
 
 int main()
 {
+    cout << "start" << endl;
     create_dir_ext();
+
 
     return 0;
 }
