@@ -32,7 +32,7 @@ void create_dir_ext()
         for (const auto &dirEntry : fs::recursive_directory_iterator(fs::current_path()))
 
         {
-            if (dirEntry.path().filename() != "main.cpp")
+            if (dirEntry.path().filename() != "main")
             {
                 if (dirEntry.path().string().find(".git") != std::string::npos)
                     continue;
