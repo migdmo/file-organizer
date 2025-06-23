@@ -12,7 +12,6 @@ A simple C++ script that helps the user to create directories according to each 
 
 Clone the repository:
 
-bash:
+```bash
 git clone https://github.com/migdmo/file-organizer.git
 cd file-organizer
-
