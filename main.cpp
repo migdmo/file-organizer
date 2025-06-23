@@ -6,25 +6,7 @@ using namespace std;
 namespace fs = std::filesystem;
 using recursive_directory_iterator = std::filesystem::recursive_directory_iterator;
 
-void check_current_directory()
-{
-    try
-    {
-        fs::path dir = fs::current_path();
-        if (fs::is_empty(dir))
-        {
-            std::cout << "Current directory is empty." << std::endl;
-        }
-        else
-        {
-            std::cout << "Current directory is not empty." << std::endl;
-        }
-    }
-    catch (const fs::filesystem_error &e)
-    {
-        std::cerr << "Error: " << e.what() << std::endl;
-    }
-}
+
 void create_dir_ext()
 {
     try
@@ -56,7 +38,7 @@ void create_dir_ext()
 
                         fs::rename(dirEntry.path(), destino);
 
-                        std::cout << "Arquivo movido para: " << destino << std::endl;
+                        std::cout << "File moved to: " << destino << std::endl;
                     }
                 }
             }
@@ -65,13 +47,12 @@ void create_dir_ext()
 
     catch (const fs::filesystem_error &e)
     {
-        std::cerr << "Erro: " << e.what() << std::endl;
+        std::cerr << "Error: " << e.what() << std::endl;
     }
 }
 
 int main()
 {
-    cout << "start" << endl;
     create_dir_ext();
 
 
